@@ -1,0 +1,17 @@
+ul {
+    list-style: none;
+    padding: 0;
+}
+.checklist li {
+    background-image: url('../Images Opdracht 6/Vierkant.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 10px;
+    padding-left: 30px;
+}
+.checklist .checked {
+    background-image: url('../Images Opdracht 6/Vierkant met vinkje.png');
+}
+
+
+
