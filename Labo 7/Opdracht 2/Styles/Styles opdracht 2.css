@@ -1,7 +1,7 @@
       table.vrienden th
     {
         font-size: 20px;
-        background-color: lightblue;
+        background-color: lightsalmon;
     }
     table.vrienden tr:nth-child(even)
     {
