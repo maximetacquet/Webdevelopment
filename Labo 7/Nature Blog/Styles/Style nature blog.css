@@ -1,4 +1,44 @@
-header
+body
 {
-    background-image: url('../Images/header.jpg/header.jpg');
+    width:95%;
+    margin:auto;
+}
+section > header
+{
+    background-image: url('../Images nature blog/header.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100px;
+    background-attachment: fixed;
+}
+section > header > h1
+{
+    margin-top: 5px;
+    margin-left:5px;
+    color:white;
+}
+section > article
+{
+    background-color: lightgray;
+
+}
+nav
+{
+    background-color: rgba(4,2,4,0.75)
+}
+nav > a
+{
+    color: limegreen;
+}
+section > article
+{
+    margin-top: 5px;
+    padding-top: 5px;
+}
+section > article > header > h1
+{
+    color: rgba(26,17,19,1);
+    text-decoration: underline;
+    font-size: xx-large;
+    padding-top: 10px;
 }
