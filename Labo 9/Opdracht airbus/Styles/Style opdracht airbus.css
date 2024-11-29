@@ -1,0 +1,111 @@
+body {
+    width: 95%;
+    margin: auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    text-align: center;
+    background-image: url("../Images opdracht airbus/bgsky3.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 200px;
+    height: 200px;
+    position:relative;
+    color: darkblue;
+}
+header h1 {
+    font-size: 300%;
+    font-weight: bold;
+    font-style: italic;
+}
+header p {
+    font-size: 240%;
+    font-weight: bold;
+    margin-top: 45px;
+}
+header img {
+    bottom: 60px;
+    right: 200px;
+    position: absolute;
+}
+main {
+    box-sizing: border-box;
+    padding-right: 10px;
+    width:75%;
+    float: right;
+}
+aside p {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #666666;
+    font-size: 90%;
+}
+aside h3 {
+    color: white;
+    background-color: blue;
+    font-size: 120%;
+}
+aside {
+    float: right;
+    box-sizing: border-box;
+    background-color: #dddddd;
+    border: 1px solid #999999;
+    width: 25%;
+}
+
+.intro {
+    text-align: justify;
+    background-color: white;
+    color: black;
+    margin: 20px 30px 20px 200px;
+}
+.blauwe_tekst {
+    color: blue;
+    font-weight: bold;
+    font-style: italic;
+}
+.logo {
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.gallery .foto {
+    display: inline-block;
+    box-sizing: content-box;
+    background-color: white;
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 180px;
+    width: 180px;
+    padding: 10px;
+    border: 1px dashed #999999;
+}
+.gallery {
+    background-color: #999999;
+    text-align: left;
+    padding-bottom: 20px;
+
+}
+footer section {
+    background-color: #666666;
+    width: 100%;
+    clear: both;
+    text-align: left;
+}
+footer div {
+    display: inline-block;
+    color: white;
+    line-height: 2em;
+    margin-left: 120px;
+
+}
+footer div a:hover {
+    color: red;
+}
+footer div a {
+    color: white;
+}
+
+
+
