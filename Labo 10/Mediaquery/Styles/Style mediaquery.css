@@ -31,6 +31,23 @@ figcaption {
 }
 
 
-@media  {
-
+@media screen and (min-width: 768px) {
+    body {
+        background-color: mediumpurple;
+    }
+    figure {
+        float: left;
+        margin:20px;
+        width: 40%;
+    }
+}
+@media screen and (min-width: 992px) {
+    body {
+        background-color: lightgreen;
+    }
+    figure {
+        float: left;
+        margin:20px;
+        width: 25%;
+    }
 }

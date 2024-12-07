@@ -1,0 +1,9 @@
+.row>div {
+    background-color: darkgrey;
+    min-height: 150px;
+    background-clip: content-box;
+}
+
+.row>div:nth-child(odd) {
+    background-color: lightgrey;
+}
