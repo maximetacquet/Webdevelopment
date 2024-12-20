@@ -57,12 +57,13 @@ main>section>p{
 }
 footer{
     border-top: 10px solid black;
-    p,a{
-        background-color: goldenrod;
-    }
+}
+footer>p,a{
+    background-color: goldenrod;
 }
 p{
     color:white;
+
 }
 @media screen and (min-width: 700px) {
     main {
