@@ -6,7 +6,10 @@ body
     width:95%;
     margin:auto;
 }
-
+tr:nth-child(2n+1)
+{
+    background-color: lightseagreen;
+}
 header
 {
     background-color: lightseagreen;

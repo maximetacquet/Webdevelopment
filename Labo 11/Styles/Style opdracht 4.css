@@ -16,6 +16,7 @@
     .container{
         grid-template-columns: repeat(5, auto);
         grid-template-rows: repeat(5, auto);
+        box-sizing: border-box;
     }
 
     .block.block1{

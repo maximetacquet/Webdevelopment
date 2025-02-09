@@ -24,8 +24,8 @@ header p {
     margin-top: 45px;
 }
 header img {
+    right:200px;
     bottom: 60px;
-    right: 200px;
     position: absolute;
 }
 main {
@@ -45,6 +45,7 @@ aside h3 {
     background-color: blue;
     font-size: 120%;
 }
+
 aside {
     float: right;
     box-sizing: border-box;
@@ -106,6 +107,3 @@ footer div a:hover {
 footer div a {
     color: white;
 }
-
-
-
