@@ -5,7 +5,7 @@ const setup = () => {
 };
 
 const wijzigText = () => {
-    let pElement = document.getElementById("text");
+    let pElement = document.getElementById("txtOutput");
     pElement.textContent = "Welkom!";
 };
 
