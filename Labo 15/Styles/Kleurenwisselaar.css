@@ -1,0 +1,9 @@
+main {
+    gap: 25px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 50%;
+}
+.switchColor {
+    background-color: blue;
+}
