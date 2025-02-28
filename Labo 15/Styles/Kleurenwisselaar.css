@@ -4,6 +4,6 @@ main {
     grid-template-columns: auto auto auto;
     width: 50%;
 }
-.switchColor {
+.kleurWisselen {
     background-color: blue;
 }

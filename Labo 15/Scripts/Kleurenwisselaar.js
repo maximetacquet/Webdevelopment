@@ -1,25 +1,25 @@
 const setup = () => {
     const setup = () => {
-        let btn1 = document.getElementById("knop1");
-        let btn2 = document.getElementById("knop2");
-        let btn3 = document.getElementById("knop3");
+        let knop1 = document.getElementById("knop1");
+        let knop2 = document.getElementById("knop2");
+        let knop3 = document.getElementById("knop3");
 
-        btn1.addEventListener("click", switchColorBtn1);
-        btn2.addEventListener("click", switchColorBtn2);
-        btn3.addEventListener("click", switchColorBtn3);
+        knop1.addEventListener("click", kleurKnop1);
+        knop2.addEventListener("click", kleurKnop2);
+        knop3.addEventListener("click", kleurKnop3);
     }
 
-    const switchColorBtn1 = () => {
-        let btn = document.getElementById("knop1");
-        btn.classList.toggle("switchColor");
+    const kleurKnop1 = () => {
+        let knop = document.getElementById("knop1");
+        knop.classList.toggle("kleurWisselen");
     }
-    const switchColorBtn2 = () => {
-        let btn = document.getElementById("knop2");
-        btn.classList.toggle("switchColor");
+    const kleurKnop2 = () => {
+        let knop = document.getElementById("knop2");
+        knop.classList.toggle("kleurWisselen");
     }
-    const switchColorBtn3 = () => {
-        let btn = document.getElementById("knop3");
-        btn.classList.toggle("switchColor");
+    const kleurKnop3 = () => {
+        let knop = document.getElementById("knop3");
+        knop.classList.toggle("kleurWisselen");
     }
 
     window.addEventListener("load", setup);
