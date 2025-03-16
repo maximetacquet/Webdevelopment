@@ -1,6 +1,6 @@
 const setup = () => {
-    let trigramBtn = document.getElementById("knop het");
-    trigramBtn.addEventListener("click", het)
+    let knop = document.getElementById("knopHet");
+    knop.addEventListener("click", het)
 }
 const het = () => {
     let inputText = document.getElementById("text");
