@@ -6,7 +6,43 @@
     <title>Formwaarden</title>
 </head>
 <body>
-
+<form method="post" action="">
+    <div>
+        <label for="roken">Is roker</label>
+        <input type="checkbox" name="roken" value="roken" id="roken">
+    </div>
+    <div>
+        <label>Moedertaal</label>
+        <input type="radio" value="nl" id="Nederlands" name="moedertaal">
+        <label for="Nederlands">Nederlands</label>
+        <input type="radio" value="fr" id="Frans" name="moedertaal">
+        <label for="Frans">Frans</label>
+        <input type="radio" value="en" id="Engels" name="moedertaal">
+        <label for="Engels">Engels</label>
+    </div>
+    <div>
+        <label for="buurland">Favoriete buurland</label>
+        <select id="buurland" name="buurland" size="1">
+            <option value="Nederland">Nederland</option>
+            <option value="Frankrijk">Frankrijk</option>
+            <option value="Duitsland">Duitsland</option>
+        </select>
+    </div>
+    <div>
+        <label for="bestelling">Bestelling</label>
+        <select id="bestelling" name="bestelling" size="6" multiple="multiple">
+            <option value="aardappelen">Aardappelen</option>
+            <option value="brood">Brood</option>
+            <option value="melk">Melk</option>
+            <option value="biefstuk">Biefstuk</option>
+            <option value="chips">Chips</option>
+            <option value="krant">Krant</option>
+        </select>
+    </div>
+    <div>
+        <input type="button" id="knop" value="Toon resultaat">
+    </div>
+</form>
 <script src="Scripts/Formwaarden.js"></script>
 </body>
 </html>
