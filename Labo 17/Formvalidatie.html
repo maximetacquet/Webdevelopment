@@ -6,7 +6,35 @@
     <title>Formvalidatie</title>
 </head>
 <body>
+<form>
+    <div class="text">
+        <label for="voornaamInput">Voornaam</label>
+        <input type="text" id="voornaamInput"/>
+        <span class="error" id="errorVoornaam"></span>
+    </div>
+    <div class="text">
+        <label for="familienaamInput">Familienaam</label>
+        <input type="text" id="familienaamInput">
+        <span class="error" id="errorFamilienaam"></span>
+    </div>
+    <div class="text">
+        <label for="geboortedatumInput">Geboortedatum</label>
+        <input type="text" id="geboortedatumInput">
+        <span class="error" id="errorGeboortedatum"></span>
+    </div>
+    <div class="text">
+        <label for="mailInput">Email</label>
+        <input type="text" id="mailInput">
+        <span class="error" id="errorMail"></span>
+    </div>
+    <div class="text">
+        <label for="kinderenInput">Aantal kinderen</label>
+        <input type="text" id="kinderenInput">
+        <span class="error" id="errorKinderen"></span>
+    </div>
 
+    <input type="button" id="knop" value="Valideer"/>
+</form>
 <script src="Scripts/Formvalidatie.js"></script>
 </body>
 </html>
