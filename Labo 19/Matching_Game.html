@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="Styles/Matching_Game.css">
+    <title>Matching Game</title>
+</head>
+<body>
+<div id="game-controls">
+    <label for="cardCountSlider">Aantal kaarten:</label>
+    <input type="range" id="cardCountSlider" min="2" max="14" value="6" step="1">
+    <span id="cardCountDisplay">6</span>
+
+    <label for="matchCountSlider">Aantal matching kaarten:</label>
+    <input type="range" id="matchCountSlider" min="2" max="5" value="2" step="1">
+    <span id="matchCountDisplay">2</span>
+
+    <div class="audio-mode-toggle">
+        <input type="checkbox" id="audioModeToggle">
+        <label for="audioModeToggle">Audio Modus</label>
+    </div>
+</div>
+<div id="game-board"></div>
+<script src="Scripts/Matching_Game.js"></script>
+</body>
+</html>
