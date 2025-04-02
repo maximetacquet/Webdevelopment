@@ -1,7 +1,7 @@
 let g = {
     IMAGE_COUNT: 5,
     IMAGE_SIZE: 48,
-    IMAGE_PATH_PREFIX: "images/",
+    IMAGE_PATH_PREFIX: "Images/",
     IMAGE_PATH_SUFFIX: ".png",
     MOVE_DELAY: 1000,
     score: 0,
