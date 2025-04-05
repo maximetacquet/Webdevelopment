@@ -82,7 +82,6 @@ const bewaarBewerktePersoon = () => {
     }
 
     updatePersonenLijst();
-    // Selecteer de juiste persoon opnieuw in de lijst
     let lst = document.getElementById("lstPersonen");
     lst.selectedIndex = huidigePersoonIndex === -1 ? personen.length - 1 : huidigePersoonIndex;
     huidigePersoonIndex = lst.selectedIndex;
