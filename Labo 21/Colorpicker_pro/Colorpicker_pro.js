@@ -3,14 +3,12 @@ const global = {
 };
 
 const colors = ['red', 'green', 'blue'];
+
 const updateSliders = (r, g, b) => {
-
     const values = [r, g, b];
-
     colors.forEach((color, index) => {
         const slider = document.getElementById(`${color}-slider`);
         const valueDisplay = document.getElementById(`${color}-value`);
-
         if (slider && valueDisplay) {
             slider.value = values[index];
             valueDisplay.textContent = values[index];
@@ -20,7 +18,7 @@ const updateSliders = (r, g, b) => {
 
 const parseRGB = (color) => {
     const rgbMatch = color.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
-    return rgbMatch ? [rgbMatch[1], rgbMatch[2], rgbMatch[3]] : null;
+    return rgbMatch ? [parseInt(rgbMatch[1]), parseInt(rgbMatch[2]), parseInt(rgbMatch[3])] : null;
 };
 
 const setColor = (color) => {
@@ -31,6 +29,38 @@ const setColor = (color) => {
     const rgbValues = parseRGB(color);
     if (rgbValues) {
         updateSliders(...rgbValues);
+        saveCurrentColor();
+        saveSliderValues(rgbValues);
+    }
+};
+
+const saveCurrentColor = () => {
+    localStorage.setItem('currentColor', global.currentColor);
+};
+
+const saveSliderValues = (rgbArray) => {
+    localStorage.setItem('sliderValues', JSON.stringify(rgbArray));
+};
+
+const saveSwatches = () => {
+    const swatches = Array.from(document.querySelectorAll(".swatch-item"))
+        .map(box => box.style.backgroundColor);
+    localStorage.setItem('swatches', JSON.stringify(swatches));
+};
+
+const loadSwatches = () => {
+    const swatchBox = document.querySelector("#swatch-box");
+    swatchBox.innerHTML = ""; // Eerst leegmaken
+    const swatches = JSON.parse(localStorage.getItem('swatches')) || [];
+    swatches.forEach(color => {
+        createSwatch(color);
+    });
+};
+
+const loadSliderValues = () => {
+    const savedValues = JSON.parse(localStorage.getItem('sliderValues'));
+    if (savedValues) {
+        updateSliders(...savedValues);
     }
 };
 
@@ -46,32 +76,50 @@ const setup = () => {
             value.textContent = colorValue;
             return colorValue;
         });
-        setColor(`rgb(${rgb.join(', ')})`);
+        const rgbString = `rgb(${rgb.join(', ')})`;
+        setColor(rgbString);
     };
 
     sliders.forEach(({ slider }) => {
         slider.addEventListener("input", updateColor);
     });
 
-    updateColor();
-    document.querySelector("#save-button").addEventListener("click", addToSwatch);
+    document.querySelector("#save-button").addEventListener("click", () => {
+        addToSwatch();
+        saveSwatches();
+    });
+
+    const savedColor = localStorage.getItem('currentColor');
+    if (savedColor) {
+        setColor(savedColor);
+    } else {
+        updateColor();
+    }
+
+    loadSwatches();
+    loadSliderValues();
 };
 
 const addToSwatch = () => {
+    createSwatch(global.currentColor);
+};
+
+const createSwatch = (color) => {
     const swatchBox = document.querySelector("#swatch-box");
     const box = document.createElement("div");
     box.classList.add("swatch-item");
-    box.style.backgroundColor = global.currentColor;
+    box.style.backgroundColor = color;
     box.addEventListener("click", (event) => {
         setColor(event.target.style.backgroundColor);
     });
 
     const button = document.createElement("button");
     button.classList.add("remove-button");
-    button.textContent = "✖";
+    button.textContent = "X";
     button.addEventListener("click", (event) => {
         event.stopPropagation();
         event.target.parentElement.remove();
+        saveSwatches();
     });
 
     box.appendChild(button);
