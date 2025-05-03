@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="myInternetStartpage.css">
+    <title>My Internet Start Page</title>
+</head>
+<body>
+<main class="container">
+    <section class="row">
+        <header>
+            <h1>My Internet Start Page</h1>
+        </header>
+        <label for="zoekopdracht">Zoekopdracht</label>
+        <input type="text" id="zoekopdracht" placeholder="Enter commando"/>
+        <p>Start your commando with "/[character] [zoekopdracht]"</p>
+        <input type="button" value="GO!" id="knop"/>
+    </section>
+    <section>
+        <h2 class="row">History</h2>
+        <div class="container">
+            <div class="row" id="geschiedenis">
+            </div>
+        </div>
+    </section>
+</main>
+<script src="myInternetStartpage.js"></script>
+</body>
+</html>
