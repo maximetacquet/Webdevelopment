@@ -1,0 +1,65 @@
+main {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#goBtn {
+    background-color: green;
+    color: white;
+    margin-bottom: 5px;
+}
+#subtext {
+    font-size: 11px;
+    color: gray;
+    margin-bottom: 5px;
+}
+.y {
+    background-color: rgb(230,33,33);
+    color: white;
+}
+.y > .goTabButton {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.i {
+    background-color: purple;
+    color: white;
+}
+.i > .goTabButton {
+    color: white;
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+}
+.g {
+    background-color: cadetblue;
+    color: white;
+}
+.g > .goTabButton {
+    color: white;
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+}
+.x {
+    background-color: deepskyblue;
+    color: white;
+}
+.x > .goTabButton {
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+}
+.tab {
+    padding: 10px;
+    border-radius: 10px;
+}
+.deleteButton {
+    border-radius: 5px;
+    border: none;
+    color: red;
+    float: right;
+}

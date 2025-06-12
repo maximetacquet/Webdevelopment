@@ -1,24 +1,36 @@
 const global = {
     currentColor: "rgb(128, 128, 128)"
 };
-
 const colors = ['red', 'green', 'blue'];
 
-const updateSliders = (r, g, b) => {
-    const values = [r, g, b];
+const updateSliders = (red, green, blue) => {
+    const rgbValues = [red, green, blue];
+
     colors.forEach((color, index) => {
-        const slider = document.getElementById(`${color}-slider`);
-        const valueDisplay = document.getElementById(`${color}-value`);
-        if (slider && valueDisplay) {
-            slider.value = values[index];
-            valueDisplay.textContent = values[index];
+        const sliderId = `${color}-slider`;
+        const valueId = `${color}-value`;
+
+        const sliderElement = document.getElementById(sliderId);
+        const valueElement = document.getElementById(valueId);
+        if (sliderElement && valueElement) {
+            const value = rgbValues[index];
+            sliderElement.value = value;
+            valueElement.textContent = value;
         }
     });
 };
 
 const parseRGB = (color) => {
     const rgbMatch = color.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
-    return rgbMatch ? [parseInt(rgbMatch[1]), parseInt(rgbMatch[2]), parseInt(rgbMatch[3])] : null;
+    const match = color.match(rgbRegex);
+    if (!match) {
+        return null;
+    }
+    const red = parseInt(match[1]);
+    const green = parseInt(match[2]);
+    const blue = parseInt(match[3]);
+
+    return [red, green, blue];
 };
 
 const setColor = (color) => {

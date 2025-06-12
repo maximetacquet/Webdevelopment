@@ -1,4 +1,3 @@
-const setup = () => {
     const setup = () => {
         let knop1 = document.getElementById("knop1");
         let knop2 = document.getElementById("knop2");
@@ -23,5 +22,3 @@ const setup = () => {
     }
 
     window.addEventListener("load", setup);
-}
-window.addEventListener("load", setup);

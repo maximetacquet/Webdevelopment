@@ -1,10 +1,7 @@
-
 body > div{
     width: 500px;
 }
-
 .container {
-
     display: flex;
     align-items: center;
     gap: 15px;
@@ -13,7 +10,6 @@ body > div{
     border-radius: 20px;
     justify-content: center;
 }
-
 #swatch-group {
     width: 500px;
     display: flex;
@@ -21,7 +17,6 @@ body > div{
     justify-content: center;
     align-items: center;
 }
-
 .swatch-item {
     width: 75px;
     height: 75px;
@@ -35,7 +30,6 @@ body > div{
     flex-direction: column;
     gap: 10px;
 }
-
 #color-box {
     width: 150px;
     height: 150px;
@@ -50,8 +44,6 @@ body > div{
     margin: 10px;
     padding: 5px;
 }
-
-
 #swatch-box {
     display: flex;
     flex-direction: row;
@@ -60,7 +52,6 @@ body > div{
     justify-content: center;
 
 }
-
 .remove-button {
 
     color: white;
